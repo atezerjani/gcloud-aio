@@ -21,6 +21,7 @@ class SubscriberClient:
                  ** kwargs: Any
                  ) -> None:
         self._subscriber = pubsub.SubscriberClient(**kwargs)
+
         self.loop = loop or asyncio.get_event_loop()
 
     def create_subscription(self,
